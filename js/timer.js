@@ -25,13 +25,14 @@ export default function Timer({
 } 
 function subTime() { 
     minutes = Number(minutesDisplay.textContent)
+    seconds = Number(secondsDisplay.textContent)
     if ( minutes <= 5 ) {
         resetControls()
         updateDisplay(0,0)
         return
     }
     minutes = minutes - 5
-    updateDisplay(minutes,0)
+    updateDisplay(minutes,seconds)
 } 
 
  function reset() {
