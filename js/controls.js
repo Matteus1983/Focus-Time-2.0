@@ -11,7 +11,7 @@ export default function Controls ( {
         buttonStop.classList.remove('hide')
       }
     function pause(){
-        buttonPause.classList.add('hide') // programação imperativa, diz passo a passo oque vai ser feito
+        buttonPause.classList.add('hide') 
         buttonPlay.classList.remove('hide')
     }
     function reset() {
@@ -21,8 +21,8 @@ export default function Controls ( {
         buttonStop.classList.add('hide')
     }
     function getMinutes(){
-        let newMinutes = prompt('Quantos minutos?') // ele vai perguntar quantos minutos pelo prompt e adicionar em newMinutes
-        if (notNumber(newMinutes)) { // Vai executar a função notNumber que é uma validação para caso seja digitado uma letra ou se vim um undefined ( cancelar ou nada ), ai vai entrar nesse condicional e retornar false e não fazer nada.
+        let newMinutes = prompt('Quantos minutos?') 
+        if (notNumber(newMinutes)) { 
             return false
         }
         
