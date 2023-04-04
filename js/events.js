@@ -12,7 +12,6 @@ import {
 } from './elements.js'
 export default function({ controls,timer,sound }) {
 
-// callback - cria a função e depois executa ela
 buttonPlay.addEventListener('click', function() {
     controls.play()
     timer.countdown()
@@ -23,19 +22,19 @@ buttonPause.addEventListener('click',function() {
     timer.hold()
 })
 
-buttonStop.addEventListener('click', function() { // programação declarativa, apenas diz oque fazer
-    controls.reset()  // zerar os comandos dos botões
-    timer.reset() // vai atualizar o display e zerar o tempo
+buttonStop.addEventListener('click', function() { 
+    controls.reset() 
+    timer.reset() 
     sound.stopMusic()
 })
 
-buttonSet.addEventListener('click', function() { // quando eu clicar no botão set
+buttonSet.addEventListener('click', function() { 
     let newMinutes = controls.getMinutes()
-    if (!newMinutes) { // Se vim um undefined, ai vai entrar nesse condicional e resetar o time
+    if (!newMinutes) { 
         timer.reset()
         return
     }
-    timer.updateDisplay(newMinutes, 0) // depois executar essa função que vai atualizar o display que veio do prompt
+    timer.updateDisplay(newMinutes, 0)
     timer.updateMinutes(newMinutes)
 })
 
@@ -47,7 +46,6 @@ buttonLess.addEventListener('click', function(){
     timer.subTime()
 })
 
-// verificar se o botão music clicado tem a class active, se sim, vai tirar, se não adiciona
 forest.addEventListener('click', function(){
     forest.classList.toggle('active')
     rainy.classList.remove('active')
@@ -79,7 +77,4 @@ fireplace.addEventListener('click', function(){
     fireplace.classList.toggle('active')
     sound.musicFireplace()
 })
-
-// se eu passar um argumento na função, ele vai ser utilizado dentro da função
-// caso eu não passe, a função vai procurar fora dele o argumento
 }
