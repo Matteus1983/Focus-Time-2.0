@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color:hsla(0, 0%, 100%, 1);
+    --bg-color-cards:hsla(240, 9%, 89%, 1);
+    --bg-color-cards-selected: hsla(194, 97%, 31%, 1);
+    --fc-color:hsla(240, 6%, 21%, 1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fc-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19.2rem;
+}
+#timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+}
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem)
+}
+.hide {
+    display: none;
+}
+.play, .pause, .more , .less, .set, .stop {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+#sound-cards {
+    margin-top: 11rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; /* server para quebrar linha */
+    width: 30.8rem; 
+    height: 33.6rem;
+    gap: 3.2rem;
+}
+
+.music {
+    width: 13.8rem;
+    height: 15.2rem;
+    border-radius: 2.4rem;
+    border: none;
+}
+
+.active {
+    background: blue;
+}
