@@ -16,7 +16,7 @@ export default function Timer({
     seconds = seconds === undefined ? 0 : seconds
     minutesDisplay.textContent = String(newMinutes).padStart(2, '00')
     secondsDisplay.textContent = String(seconds).padStart(2, '00')
- }
+}
  function addMinutes() { 
     minutes = Number(minutesDisplay.textContent) 
     minutesDisplay.textContent = String(minutes + 5).padStart(2, '00') 
@@ -37,7 +37,7 @@ function subTime() {
  function reset() {
     updateDisplay(minutes,0) // Quando clicar no botão que contenha a função 'resetTimer', vai atualizar o display colocando o valor ' minutes ' = que veio do html
     clearTimeout(timerTimeOut) // quando clicar no stop. vai parar a contagem, fazendo morrer a função timerTimeOut
- }
+}
 function countdown(){
         timerTimeOut = setTimeout(function() {
             let seconds = Number(secondsDisplay.textContent)
@@ -62,7 +62,7 @@ function countdown(){
 
             countdown() // Uma função é dita recursiva quando dentro dela é feita uma ou mais chamadas a ela mesma.
         }, 1000)
- }
+}
 
 function updateMinutes(newMinutes) {
     minutes = newMinutes
@@ -80,6 +80,6 @@ function hold(){
     hold,
     addMinutes,
     subTime
- }
+}
 
 }
