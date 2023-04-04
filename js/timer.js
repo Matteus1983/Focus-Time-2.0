@@ -36,8 +36,8 @@ function subTime() {
 } 
 
  function reset() {
-    updateDisplay(minutes,0) // Quando clicar no botão que contenha a função 'resetTimer', vai atualizar o display colocando o valor ' minutes ' = que veio do html
-    clearTimeout(timerTimeOut) // quando clicar no stop. vai parar a contagem, fazendo morrer a função timerTimeOut
+    updateDisplay(0,0)
+    clearTimeout(timerTimeOut) 
 }
 function countdown(){
         timerTimeOut = setTimeout(function() {
@@ -48,8 +48,8 @@ function countdown(){
             updateDisplay(minutes,0)
 
             if( isFinished ) { 
-                resetControls() // Vai resetar os controles, sai pause e entra play, sai stop e entra set
-                updateDisplay(0,0) // Vai fazer com que o crônometro volte ao tempo que foi inserido, seja pelo html ou pelo prompt
+                resetControls() 
+                updateDisplay(0,0)
                 Sounds().timeFinish()
                 return
             }
@@ -61,7 +61,7 @@ function countdown(){
 
             updateDisplay(minutes, String(seconds -1 ))
 
-            countdown() // Uma função é dita recursiva quando dentro dela é feita uma ou mais chamadas a ela mesma.
+            countdown() 
         }, 1000)
 }
 
@@ -70,7 +70,7 @@ function updateMinutes(newMinutes) {
 }
 
 function hold(){
-    clearTimeout(timerTimeOut) // tá segurando
+    clearTimeout(timerTimeOut) 
 }
 
  return {
