@@ -8,6 +8,7 @@ export default function Timer({
 
  let timerTimeOut
  let minutes = Number(minutesDisplay.textContent)
+ let seconds = Number(secondsDisplay.textContent)
  let newMinutes
 
  function updateDisplay(newMinutes, seconds){
@@ -19,7 +20,7 @@ export default function Timer({
  function addMinutes() { 
     minutes = Number(minutesDisplay.textContent) 
     minutesDisplay.textContent = String(minutes + 5).padStart(2, '00') 
-    secondsDisplay.textContent = String(0).padStart(2, '00') 
+    secondsDisplay.textContent = String(seconds + 0).padStart(2, '00') 
     newMinutes = minutes
 } 
 function subTime() { 
